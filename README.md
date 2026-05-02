@@ -39,3 +39,17 @@ The system follows the **"Least Privilege"** security model:
    terraform init
    terraform plan
    terraform apply
+3. **Configure CI/CD:**
+   * Go to your GitHub Repository Settings > Secrets and variables > Actions.
+   * Add AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
+   * Add S3_BUCKET_NAME and CLOUDFRONT_DIST_ID from your Terraform outputs.
+4. **Push to Main:**
+   ```bash
+   git add .
+   git commit -m "feat: updated portfolio assets"
+   git push origin main
+## 📈 Future Enhancements
+- [ ] **AWS WAF Integration:** Add a Web Application Firewall for IP rate-limiting and DDoS protection.
+- [ ] **Custom Domain:** Map to a professional domain (e.g., .com or .in) using Route 53 and ACM.
+- [ ] **Serverless Backend:** Implement a dynamic contact form using API Gateway and AWS Lambda.
+- [ ] **Real-time Monitoring:** Set up CloudWatch dashboards and SNS alerts for billing and traffic spikes.
